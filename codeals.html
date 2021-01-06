@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" 
+content="width=device-width,initial-scale=1" />
+<title>sidenav JavaScript</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<style>
+html {
+	box-sizing:border-box;
+	}
+*,*:before, *:after {
+	box-sizing:inherit;
+	}
+	
+	
+body {
+	height:900px;
+	background-color: #ffffff;
+	font-family:"Helvetica",sans-serif;
+	}
+	
+.sidenav {
+	height:100%;
+	width:0;
+	border-radius:0;
+	position:fixed;
+	z-index:2;
+	top:0;
+	left:0;
+	background-color:#111;
+	overflow-x:hidden;
+	transition:0.3s;
+	padding-top:100px;
+	box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.2);
+	}
+	
+.sidenav a {
+
+	padding:10px 10px 8px 8px;
+	text-decoration:none;
+	font-size:20px;
+	color:white;
+	display:block;
+	transition:0.3s;
+	text-align:left;
+
+
+	}
+	
+.sidenav a:hover {
+	color:#f1f1f1;
+	}
+	
+.sidenav .closebtn {
+	position:absolute;
+	top:-5px;
+	right:15px;
+	font-size:36px;
+	margin-left:50px;
+	color:yellow;
+
+	}
+	
+@media screen and
+(max-height:450px) {
+	.sidenav {padding-top:25px}
+	.sidenav a {font-size:20px}
+	}
+#nav1 {
+	box-sizing:border-box;
+	margin-left:18px;
+	width:200px;
+	height:40px;
+	margin-bottom:8px;
+	border:0px solid grey;
+	border-radius:10px;
+	background-color:green;
+	}
+
+.exx {
+	box-shadow:6px 8px 15px #888888;
+	border-radius:10px;
+	border: 1px solid teal;
+	padding:8px;
+	padding-bottom:50px;
+	margin:3px;
+	width:200px;
+	height:200px;
+	margin-top:5px;
+	background-color:teal;
+	}
+	
+.column {
+	float:left;
+	width:50%;
+	margin-top:5px;
+	margin-bottom:16px;
+	padding:0 8px;
+
+	}
+	
+@media screen and (max-width: 650px) {
+.column {
+	width:100%;
+	display:block;
+
+	}
+}
+
+.card {
+	box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.2);
+	border:none;
+	border-radius:10px;
+	float:inherit;
+	padding:0;
+	}
+.container {
+	margin-top:-15px;
+	padding: 0 16px;
+
+
+	}
+	
+.container::after,.row::afer{
+	content:"";
+	clear:both;
+	display:table;
+	}
+.title {
+	color:red;
+	margin-top:-15px;
+	}
+	
+.button {
+	border:none;
+	border-radius:12px;
+	outline:0;
+	display:inline-block;
+	padding:10px;
+	margin-bottom:15px;
+	color:white;
+	background-color:grey;
+	text-align:center;
+	cursor:pointer;
+	width:49%;
+
+	}
+	
+</style>
+
+
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+<a href="javascript:void(0)" 
+class="closebtn" onclick="closeNav()">&times;</a>
+
+	<a href="#" id="nav">Produk</a>
+	<a href="#" id="nav">Aksesories</a>
+	<a href="#" id="nav">Fashion</a>
+	<a href="#" id="nav">Dll</a>
+
+</div>
+
+<span style="font-size:30px;cursor:pointer"
+onclick="openNav()">&#9776;
+</span>
+
+<div class="row">
+<div class="column">
+<div class="card">
+<img src="/storage/emulated/0/Ww.jpg" style="width:100%">
+
+
+	<div class="container">
+	<h2>Headset Robot</h2>
+	<p class="title">Rp.25.000</p>
+	<p><button class="button">Beli</button>
+	<button class="button">Jual</button></p>
+	</div>
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+<img src="https://ecs7.tokopedia.net/img/cache/700/VqbcmM/2020/10/19/868cb880-3a70-4b1e-a188-42e708f02cb2.jpg" style="width:100%">
+	<div class="container">
+	<h2>Headset Bluetooth</h2>
+	<p class="title">Rp.15.000</p>
+	<p><button class="button">Beli</button></p>
+	</div>
+</div>
+</div>
+
+<div class="column">
+<div class="card">
+<img src="https://ecs7.tokopedia.net/img/cache/700/VqbcmM/2020/11/25/4bc4f703-c85e-4b8e-9ccb-411c18800a19.jpg" style="width:100%">
+	<div class="container">
+	<h2>Headset Bluetooth</h2>
+	<p class="title">Rp.15.000</p>
+	<p><button class="button">Beli</button></p>
+	</div>
+</div>
+</div>
+</div>
+
+
+</body>
+
+<script>
+	function openNav(){
+	document.getElementById ("mySidenav").style.width="250px";
+	}
+	
+	function closeNav() {
+	document.getElementById ("mySidenav").style.width="0";
+	}
+
+
+</script>
+</html>
