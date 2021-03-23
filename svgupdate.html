@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html lang= "en">
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<title>bkpshop.com</title>
+<meta charset= "utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale:1.0">
+
+<link rel="stylesheet" href= "svg.css">
+</head>
+<body>
+  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCKYbKn0JSbLUHZSU8gGy__xOq79LFRAUc",
+    authDomain: "radja-shop.firebaseapp.com",
+    databaseURL: "https://radja-shop-default-rtdb.firebaseio.com",
+    projectId: "radja-shop",
+    storageBucket: "radja-shop.appspot.com",
+    messagingSenderId: "37103739966",
+    appId: "1:37103739966:web:d2e6410dddc6edb80d9d6f",
+    measurementId: "G-SL699TFQ9R"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+<body onpageshow="myFunction()" id="pos">
+<div class="header">
+	<div id="clock"></div>
+	<p class="logo">M</p>
+</div>
+
+<div class="tab">
+<button class="tablink" 
+onclick="openCity(event, 'London')">Toko</button>
+
+<button class="tablink"
+onclick="openCity(event, 'Paris')">Produk</button>
+
+<button class="tablink"
+onclick="openCity(event, 'Tokyo')">Promo</button>
+
+<button class="tablink"
+onclick="openCity(event, 'Brazil')">Terbaru</button>
+
+<button class="tablink"
+onclick="openCity(event, 'Japan')">Kategori</button>
+
+<button class="tablink"
+onclick="openCity(event, 'Indonesia')">Posts</button>
+
+<button class="tablink"
+onclick="openCity(event, 'Arab')">Kontak</button>
+
+<button class="tablink"
+onclick="openCity(event, 'Vietnam')">Sosial media</button>
+
+<button class="tablink" onclick="openFullscreen();">Full</button>
+</div>
+
+
+
+<div class="slideshow-container">
+	<div class="mySlides fade">
+		<div class="numbertext"></div>
+		<div class="gambar1">
+		</div>
+		<div class="text"></div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="numbertext"></div>
+		<div class= "gambar2">
+		</div>
+		<div class="text"></div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="numbertext"></div>
+		<div class= "gambar3"></div>
+		<div class="text"></div>
+	</div>
+
+<!--tombol slideshow
+<a class="prev" onClick="plusSlides(-1)">&#10094;</a>
+<a class="next" onClick="plusSlides(1)">&#10095;</a>
+-->
+</div>
+<div style= "text-align:center">
+	<span class= "dot" onClick="currentSlide(1)"></span>
+		<span class= "dot" onClick="currentSlide(2)"></span>
+			<span class= "dot" onClick="currentSlide(3)"></span>
+</div>
+
+<div id="London" class="tabcontent">
+<div class="header1"></div>
+<button onclick= "this.parentElement.style.display='none' " class="back">
+<i class="fa fa-arrow-left" style="font-size:20px"></i>
+</button>
+<button onclick="openNav()" class="menu">
+<i class="fa fa-ellipsis-v" style="font-size:20px"></i></button>
+
+<div id="mySidenav" class="sidenav">
+</div>
+<!--
+<img src="/storage/emulated/0/Download/jw.jpg"> -->
+
+
+<div class="header2">
+<div class="logoA">
+<p class="toko">Nama Toko</p>
+<div class="bintang">
+<i class="fa fa-star checked"></i>
+<i class="fa fa-star checked"></i>
+<i class="fa fa-star checked"></i>
+<i class="fa fa-star checked"></i>
+<i class="fa fa-star checked"></i>
+</div>
+	</div>
+	</div>
+
+
+	<div id="Paris" class="tabcontent">
+		<button onclick= "this.parentElement.style.display='none' " class="back">
+<i class="fa fa-arrow-left" style="font-size:20px"></i>
+</button>
+<button onclick="openNav()" class="menu">
+<i class="fa fa-ellipsis-v" style="font-size:18px"></i></button>
+<div id="mySidenav" class="sidenav">
+</div>
+	<h2>Produk</h2>
+	</div>
+	
+	
+<div id="Tokyo" class="tabcontent">
+		<button onclick= "this.parentElement.style.display='none' " class="back">
+<i class="fa fa-arrow-left" style="font-size:15px"></i>
+</button>
+<button onclick="openNav()" class="menu">
+<i class="fa fa-ellipsis-v" style="font-size:18px"></i></button>
+<div id="mySidenav" class="sidenav">
+</div>
+<h2>Promo</h2>
+</div>
+
+
+	<div id="Brazil" class="tabcontent">
+			<button onclick= "this.parentElement.style.display='none' " class="back">
+<i class="fa fa-arrow-left" style="font-size:15px"></i>
+</button>
+<button onclick="openNav()" class="menu">
+<i class="fa fa-ellipsis-v" style="font-size:18px"></i></button>
+<div id="mySidenav" class="sidenav">
+</div>
+	<h2>Terbaru</h2>
+	</div>
+	
+	
+<div id="Japan" class="tabcontent">
+		<button onclick= "this.parentElement.style.display='none' " class="back">
+<i class="fa fa-arrow-left" style="font-size:15px"></i>
+</button>
+<button onclick="openNav()" class="menu">
+<i class="fa fa-ellipsis-v" style="font-size:18px"></i></button>
+<div id="mySidenav" class="sidenav">
+</div>
+<h2>Kategori</h2>
+</div>
+
+
+	<div id="Indonesia" 
+	class="tabcontent">
+			<button onclick= "this.parentElement.style.display='none' " class="back">
+<i class="fa fa-arrow-left" style="font-size:15px"></i>
+</button>
+<button onclick="openNav()" class="menu">
+<i class="fa fa-ellipsis-v" style="font-size:18px"></i></button>
+<div id="mySidenav" class="sidenav">
+</div>
+	<h2>Post</h2>
+	</div>
+	
+	
+<div id="Arab" 
+class="tabcontent">
+		<button onclick= "this.parentElement.style.display='none' " class="back">
+<i class="fa fa-arrow-left" style="font-size:15px"></i>
+</button>
+<button onclick="openNav()" class="menu">
+<i class="fa fa-ellipsis-v" style="font-size:18px"></i></button>
+<div id="mySidenav" class="sidenav">
+</div>
+<h2>Kontak</h2>
+</div>
+
+
+	<div id="Vietnam" 
+	class="tabcontent">
+			<button onclick= "this.parentElement.style.display='none' " class="back">
+<i class="fa fa-arrow-left" style="font-size:15px"></i>
+</button>
+<button onclick="openNav()" class="menu">
+<i class="fa fa-ellipsis-v" style="font-size:18px"></i></button>
+<div id="mySidenav" class="sidenav">
+</div>
+	<h2>Sosial Media</h2>
+	</div>
+	
+<script src="svg.js"></script>
+</body>
+</html>
